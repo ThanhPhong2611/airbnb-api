@@ -38,6 +38,8 @@ exports.register = async function (req, res, next) {
   })
 };
 
+
+
 exports.getAll = async function (req, res, next) {
   const { roomCount,
     guestCount,
@@ -106,4 +108,11 @@ exports.deleteList = async function(req, res, next) {
       success: true,
       list
   });
+}
+
+exports.testApi = async function (req, res, next) {
+  res.status(200).json({
+    success: true,
+    data : []
+});
 }
