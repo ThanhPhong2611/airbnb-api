@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 var CheckConnectDatabase = false;
 const connectDatabase = async() =>{
-    await mongoose.connect('mongodb+srv://ygkr6BO6fVbM0jLD:ygkr6BO6fVbM0jLD@cluster0.22ansxj.mongodb.net/?retryWrites=true&w=majority',{
+    await mongoose.connect(process.env.MONGODB_URL,{
         useNewUrlParser: true, 
         useUnifiedTopology: true,
     }).then((res)=>{
